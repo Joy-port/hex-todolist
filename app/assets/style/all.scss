@@ -278,14 +278,14 @@ input[type="text"] {
       width: 34px;
       height: 18px;
       border-radius: 10px;
-      background: #FFF8E5CC;
+      background: transparent;
       z-index: 1;
       -webkit-transition: color 500ms linear;
       -ms-transition: color 500ms linear;
       transition: color 500ms linear;
     }
     &::after{
-      content:'toggle_on';
+      content:'toggle_off';
       position: absolute;
       top:5%;
       right:-5%;
@@ -337,14 +337,14 @@ input[type="text"] {
         width: 34px;
         height: 18px;
         border-radius: 10px;
-        background: transparent;
+        background: #D3E0EACC;
         z-index: 1;
         -webkit-transition: color 500ms linear;
         -ms-transition: color 500ms linear;
         transition: color 500ms linear;
       }
       &::after{
-        content:'toggle_off';
+        content:'toggle_on';
         position: absolute;
         top:5%;
         right:-5%;
