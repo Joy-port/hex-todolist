@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do List | My Daily planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+
+  <body>
+    <div class="bg">
+<div class="container">
+  <h1>TODO LIST</h1>
+  <div class="card input">
+    <input type="text" placeholder="請輸入待辦事項" class="txt"/>
+    <a href="#" class="btn_add">+</a>
+  </div>
+  <div class="card card_list">
+    <ul class="tab">
+      <li class="active" data-tab="all">全部</li>
+      <li data-tab="undone">待完成</li>
+      <li data-tab="done">已完成</li>
+    </ul>
+    <div class="cart_content">
+      <ul class="list">
+        <!-- <li data-num = "">
+          <label class="checkbox" for="check">
+            <input type="checkbox" id="check"/>
+            <span>把冰箱發霉的檸檬拿去丟</span>
+          </label>
+          <a href="#" class="delete"></a>
+        </li> -->
+      </ul>
+      <div class="list_footer">
+        <p> <span class="totalNum"></span>個待完成項目</p>
+        <a href="#" class="clearBtn">清除已完成項目</a>
+      </div>
+    </div>
+  </div>
+</div>
+<a href="#" class="switch-btn material-icons-outlined">
+    toggle_off
+  </a>
+</div>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
