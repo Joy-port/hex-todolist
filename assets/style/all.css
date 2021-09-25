@@ -353,18 +353,46 @@ input[type="text"]::placeholder {
   opacity: 1;
 }
 
+.switch-container {
+  position: relative;
+}
+
 .switch-btn {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 10%;
   color: #333;
   font-size: 2.5rem;
-  transition: all .3s ease-in;
+  transition: color 1ms linear;
 }
 
-.switch-btn:hover {
-  color: #FFF8E5;
+.switch-btn:focus, .switch-btn :active {
+  color: #ffd370;
+}
+
+.switch-btn:focus::before, .switch-btn :active::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translate(0%, 45%);
+  width: 34px;
+  height: 18px;
+  border-radius: 10px;
+  background: #FFF8E5CC;
+  z-index: 1;
+  transition: color 500ms linear;
+}
+
+.switch-btn:focus::after, .switch-btn :active::after {
+  content: 'toggle_on';
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  transform: translate(-5%, -5%);
+  color: #333;
+  z-index: 2;
   transition: color 500ms linear;
 }
 
@@ -384,12 +412,60 @@ input[type="text"]::placeholder {
 
 .night .switch-btn {
   color: #D3E0EA;
-  transition: all .3s ease-out;
+  transition: color 1ms linear;
+  z-index: 2;
 }
 
-.night .switch-btn:hover {
-  color: #333;
+.night .switch-btn:focus, .night .switch-btn :active {
+  color: #1687A7;
+}
+
+.night .switch-btn:focus::before, .night .switch-btn :active::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translate(0%, 45%);
+  width: 34px;
+  height: 18px;
+  border-radius: 10px;
+  background: transparent;
+  z-index: 1;
   transition: color 500ms linear;
+}
+
+.night .switch-btn:focus::after, .night .switch-btn :active::after {
+  content: 'toggle_off';
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  transform: translate(-5%, -5%);
+  color: #333;
+  z-index: 2;
+  transition: color 500ms linear;
+}
+
+.night .switch-btn::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translate(0%, 45%);
+  width: 34px;
+  height: 18px;
+  border-radius: 10px;
+  background: #D3E0EACC;
+  z-index: 1;
+}
+
+.night .switch-btn::after {
+  content: 'toggle_on';
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  transform: translate(-5%, -5%);
+  color: #333;
+  z-index: 21;
 }
 
 /*# sourceMappingURL=all.css.map */
