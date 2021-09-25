@@ -253,20 +253,51 @@ input[type="text"] {
   }
 }
 
+.switch-container{
+  position: relative;
+}
+
 .switch-btn{
   display: block;
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 10%;
   color: $dark;
   font-size: 2.5rem;
-  transition: all .3s ease-in;
-  &:hover{
-    color: #FFF8E5;
-    -webkit-transition: color 500ms linear;
-    -ms-transition: color 500ms linear;
-    transition: color 500ms linear;
+  transition: color 1ms linear;
+
+  &:focus, :active{
+    color: $default;
+
+    &::before{
+      content:'';
+      position: absolute;
+      top:5%;
+      right:10%;
+      transform: translate(0%,45%);
+      width: 34px;
+      height: 18px;
+      border-radius: 10px;
+      background: #FFF8E5CC;
+      z-index: 1;
+      -webkit-transition: color 500ms linear;
+      -ms-transition: color 500ms linear;
+      transition: color 500ms linear;
+    }
+    &::after{
+      content:'toggle_on';
+      position: absolute;
+      top:5%;
+      right:-5%;
+      transform: translate(-5%,-5%);
+      color: $dark;
+      z-index: 2;
+      -webkit-transition: color 500ms linear;
+      -ms-transition: color 500ms linear;
+      transition: color 500ms linear;
+    }
   }
+
 }
 
 .night{
@@ -291,12 +322,64 @@ input[type="text"] {
   }
   .switch-btn{
     color: #D3E0EA;
-    transition: all .3s ease-out;
-    &:hover{
-      color: $dark;
-      -webkit-transition: color 500ms linear;
-      -ms-transition: color 500ms linear;
-      transition: color 500ms linear;
+    transition: color 1ms linear;
+    z-index: 2;
+
+    &:focus, :active{
+      color: #1687A7;
+
+      &::before{
+        content:'';
+        position: absolute;
+        top:5%;
+        right:10%;
+        transform: translate(0%,45%);
+        width: 34px;
+        height: 18px;
+        border-radius: 10px;
+        background: transparent;
+        z-index: 1;
+        -webkit-transition: color 500ms linear;
+        -ms-transition: color 500ms linear;
+        transition: color 500ms linear;
+      }
+      &::after{
+        content:'toggle_off';
+        position: absolute;
+        top:5%;
+        right:-5%;
+        transform: translate(-5%,-5%);
+        color: $dark;
+        z-index: 2;
+        -webkit-transition: color 500ms linear;
+        -ms-transition: color 500ms linear;
+        transition: color 500ms linear;
+  
+      }
+
     }
+
+    &::before{
+      content:'';
+      position: absolute;
+      top:5%;
+      right:10%;
+      transform: translate(0%,45%);
+      width: 34px;
+      height: 18px;
+      border-radius: 10px;
+      background: #D3E0EACC;
+      z-index: 1;
+    }
+    &::after{
+      content:'toggle_on';
+      position: absolute;
+      top:5%;
+      right:-5%;
+      transform: translate(-5%,-5%);
+      color: $dark;
+      z-index: 21;
+    }
+
   }
 }
