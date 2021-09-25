@@ -380,13 +380,13 @@ input[type="text"]::placeholder {
   width: 34px;
   height: 18px;
   border-radius: 10px;
-  background: #FFF8E5CC;
+  background: transparent;
   z-index: 1;
   transition: color 500ms linear;
 }
 
 .switch-btn:focus::after, .switch-btn :active::after {
-  content: 'toggle_on';
+  content: 'toggle_off';
   position: absolute;
   top: 5%;
   right: -5%;
@@ -429,13 +429,13 @@ input[type="text"]::placeholder {
   width: 34px;
   height: 18px;
   border-radius: 10px;
-  background: transparent;
+  background: #D3E0EACC;
   z-index: 1;
   transition: color 500ms linear;
 }
 
 .night .switch-btn:focus::after, .night .switch-btn :active::after {
-  content: 'toggle_off';
+  content: 'toggle_on';
   position: absolute;
   top: 5%;
   right: -5%;
